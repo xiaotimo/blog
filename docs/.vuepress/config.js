@@ -3,7 +3,11 @@ module.exports = {
 	title: '小提莫博客中心',
 	description: '这里是小提莫的博客首页',
 	dest: './dist', // 指定 vuepress build 的输出目录
+	head: [
+	    ['link', { rel: 'icon', href: '/logo.png' }]
+	],
 	themeConfig: {
+		logo: '/logo.png',
 		sidebarDepth: 2,
 		nav: [{
 				text: '主页',
@@ -21,39 +25,47 @@ module.exports = {
 				text: 'vue',
 				link: '/vue/'
 			},
-			// {
-			// 	text: 'react',
-			// 	link: '/react/'
-			// },
-			// {
-			// 	text: 'nodejs',
-			// 	link: '/nodejs/'
-			// },
-			// {
-			// 	text: 'mysql',
-			// 	link: '/mysql/'
-			// },
-			// {
-			// 	text: 'un-iapp',
-			// 	link: '/uniapp/'
-			// },
-			// {
-			// 	text: '关于我',
-			// 	link: '/my/'
-			// }
+			{
+				text: 'uni-app',
+				link: '/uni-app/'
+			},
+			{
+				text: 'mysql',
+				link: '/mysql/'
+			},
+			{
+				text: 'react',
+				link: '/react/'
+			},
+			{
+				text: 'node',
+				link: '/node/'
+			},
+			{
+				text: '关于我',
+				link: '/my/'
+			}
 		],
 		sidebar: {
 			'/vue-xiaomu-admin/': [
 				{
+					title: '指南', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						''
+					]	
+				},
+				{
 					title: '基础阶段', // 必要的
 					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
 					collapsable: false, // 可选的, 默认值是 true,
-					children: [{
+					children: [
+						{
 							title: 'Vue进阶', // 必要的
 							path: '/vue-xiaomu-admin/basics/one', // 可选的, 应该是一个绝对路径
 							collapsable: false, // 可选的, 默认值是 true,
 						},
-						['/vue-xiaomu-admin/ones/two', '第二个侧边栏']
 					]
 				},
 			],
@@ -118,64 +130,59 @@ module.exports = {
 					collapsable: false, // 可选的, 默认值是 true,
 					children: [
 						{
-							title: 'ES6', // 必要的
-							path: '/javascript/basics/vue', // 可选的, 应该是一个绝对路径
+							title: 'VUE', // 必要的
+							path: '/vue/basics/vue', // 可选的, 应该是一个绝对路径
 							collapsable: false,
 						},
 					]
 				},
-			]
-			// 			],
-			// 			'/nodejs/': [
-			// 				['http', "http模块"],
-			// 				['1', "使用包"],
-			// 				['fs', "fs模块"],
-			// 				['get', "接收浏览器的get数据"],
-			// 				['post', "接收浏览器的post数据"],
-			// 				['zh', "同时处理get和post请求"],
-			// 				['user', "实现用户注册登录"],
-			// 				['assert', "assert-断言"],
-			// 				['path', "path-路径"],
-			// 				['url', "url-网址"],
-			// 				['querystring', "querystring-请求数据"],
-			// 				// {
-			// 				// 	title: '开发中...',
-			// 				// 	collapsable: false,
-			// 				// 	children: []
-			// 				// },
-			// 			],
-			// 			'/mysql/': [
-			// 				// ['desc', "4大语句"],
-			// // 				{
-			// // 					title: '开发中...',
-			// // 					collapsable: false,
-			// // 					children: []
-			// // 				},
-			// 			],
-			// 			'/uniapp/': [
-			// 				['1', "组件内时间戳转换"],
-			// 				['2', "富文本图片处理"],
-			// // 				{
-			// // 					title: '开发中...',
-			// // 					collapsable: false,
-			// // 					children: []
-			// // 				},
-			// 			],
-			// 			'/my/': [],
-			// 			'/vue-cli/': [
-			// 				{
-			// 					title: '创建项目',
-			// 					collapsable: true,
-			// 					children: [
-			// 						['2', "初始化项目"]
-			// 					]
-			// 				}
-			// 			]
-			// '/life/': [
-			// 	'',
-			// 	'one',
-			// 	'two'
-			// ]
+			],
+			'/uni-app/': [
+				{
+					title: '指南', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						''
+					]	
+				},
+				{
+					title: '基础阶段', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						{
+							title: 'uni-app', // 必要的
+							path: '/uni-app/basics/one', // 可选的, 应该是一个绝对路径
+							collapsable: false,
+						},
+					]
+				},
+			],
+			'/node/': [
+				{
+					title: '指南', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						''
+					]	
+				},
+				{
+					title: '基础阶段', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						{
+							title: 'node基础', // 必要的
+							path: '/node/basics/one', // 可选的, 应该是一个绝对路径
+							collapsable: false,
+						},
+					]
+				},
+			],
+			'/mysql/': [],
+			'/my/': []
 		}
 	}
 }
