@@ -160,3 +160,82 @@
 </html>
 
 ```
+
+## 过滤器
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>过滤器</title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{message | lower}}
+			<!-- 过滤大写，改为小写 -->
+		</div>
+		<script type="text/javascript">
+			new Vue({
+				el: '#app',
+				filters: {
+				  lower(value) {
+					return value.toLowerCase()
+				  }
+				},
+				data() {
+				  return {
+					message: 'Hello Vue'
+				  }
+				}
+			})
+		</script>
+	</body>
+</html>
+```
+## class 和 style 绑定的高级用法
+```
+<html>
+  <head>
+    <title>class 和 style 绑定的高级用法</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div :class="['active', 'normal']">数组绑定多个class</div>
+      <div :class="[{active: isActive}, 'normal']">数组包含对象绑定class</div>
+      <div :class="[showWarning(), 'normal']">数组包含方法绑定class</div>
+      <div :style="[warning, bold]">数组绑定多个style</div>
+      <div :style="[warning, mix()]">数组包含方法绑定style</div>
+      <div :style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }">style多重值</div>
+    </div>
+    <script>
+      new Vue({
+        el: '#root',
+        data() {
+          return {
+            isActive: true,
+            warning: {
+              color: 'orange'
+            },
+            bold: {
+              fontWeight: 'bold'
+            }
+          }
+        },
+        methods: {
+          showWarning() {
+            return 'warning'
+          },
+          mix() {
+            return {
+              ...this.bold,
+              fontSize: 20
+            }
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
+```
