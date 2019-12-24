@@ -42,6 +42,10 @@ module.exports = {
 				link: '/node/'
 			},
 			{
+				text: 'jquery的前世今生',
+				link: '/jquery/'
+			},
+			{
 				text: '关于我',
 				link: '/my/'
 			}
@@ -158,6 +162,25 @@ module.exports = {
 						},
 					]
 				},
+				{
+					title: '实战阶段', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						{
+							title: '社交app', // 必要的
+							path: '/uni-app/shejiao/start', // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '商城app', // 必要的
+							path: '/uni-app/shop/start', // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '仿微信app', // 必要的
+							path: '/uni-app/wx/start', // 可选的, 应该是一个绝对路径
+						}
+					]
+				},
 			],
 			'/node/': [
 				{
@@ -180,6 +203,16 @@ module.exports = {
 						},
 					]
 				},
+			],
+			'/jquery/': [
+				{
+					title: '指南', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						''
+					]	
+				}
 			],
 			'/mysql/': [],
 			'/my/': []
