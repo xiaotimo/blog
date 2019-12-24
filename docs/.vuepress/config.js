@@ -70,6 +70,10 @@ module.exports = {
 							path: '/vue-xiaomu-admin/basics/one', // 可选的, 应该是一个绝对路径
 							collapsable: false, // 可选的, 默认值是 true,
 						},
+						{
+							title: 'Element-UI 入门', // 必要的
+							path: '/vue-xiaomu-admin/basics/elementui' // 可选的, 应该是一个绝对路径
+						}
 					]
 				},
 			],
