@@ -73,6 +73,14 @@ module.exports = {
 						{
 							title: 'Element-UI 入门', // 必要的
 							path: '/vue-xiaomu-admin/basics/elementui' // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '前端框架搭建', // 必要的
+							path: '/vue-xiaomu-admin/frame/qianduan' // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '后端框架搭建', // 必要的
+							path: '/vue-xiaomu-admin/frame/houtai' // 可选的, 应该是一个绝对路径
 						}
 					]
 				},
