@@ -174,7 +174,6 @@ npm run dev
 - fixedHeader：是否将头部布局固定
 - sidebarLogo：菜单栏中是否显示LOGO
 - errorLog：默认显示错误日志的环境
-## 
 ## 源码调试
 ## 项目结构
 - api：接口请求

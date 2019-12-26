@@ -7,6 +7,7 @@ module.exports = {
 	    ['link', { rel: 'icon', href: '/logo.png' }]
 	],
 	themeConfig: {
+		lastUpdated: '上次更新时间',
 		logo: '/logo.png',
 		sidebarDepth: 2,
 		nav: [{
@@ -83,6 +84,30 @@ module.exports = {
 							path: '/vue-xiaomu-admin/frame/houtai' // 可选的, 应该是一个绝对路径
 						}
 					]
+				},
+				{
+					title: '实战阶段', // 必要的
+					// path: '/vue-xiaomu-admin/ones/',      // 可选的, 应该是一个绝对路径
+					collapsable: false, // 可选的, 默认值是 true,
+					children: [
+						{
+							title: '项目需求分析', // 必要的
+							path: '/vue-xiaomu-admin/shizhan/xuqiufenxi', // 可选的, 应该是一个绝对路径
+							collapsable: false, // 可选的, 默认值是 true,
+						},
+						{
+							title: '用户登录（上）', // 必要的
+							path: '/vue-xiaomu-admin/shizhan/login_one' // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '用户登录（中）', // 必要的
+							path: '/vue-xiaomu-admin/shizhan/login_two' // 可选的, 应该是一个绝对路径
+						},
+						{
+							title: '用户登录（下）', // 必要的
+							path: '/vue-xiaomu-admin/shizhan/login_three' // 可选的, 应该是一个绝对路径
+						}
+					]	
 				},
 			],
 			'/javascript/': [
