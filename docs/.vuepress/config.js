@@ -2,6 +2,7 @@ module.exports = {
 	base: '/', // 用于部署时的子路径
 	title: '小提莫博客中心',
 	description: '这里是小提莫的博客首页',
+	base: '/blog/',
 	dest: './dist', // 指定 vuepress build 的输出目录
 	head: [
 	    ['link', { rel: 'icon', href: '/logo.png' }]
